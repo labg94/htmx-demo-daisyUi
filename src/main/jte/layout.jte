@@ -1,7 +1,6 @@
 @import gg.jte.Content
 @param String title
-@param  Content content
-
+@param Content content
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +13,25 @@
     <link rel="stylesheet" href="css/main.css"
           integrity="sha384-8/9/2021, 11:15:00 AM" crossorigin="anonymous">
 </head>
-<body>
-<header>
-    <h1>${title}</h1>
+<body class="bg-base-100 text-base-content flex flex-col min-h-screen">
+<header class="navbar bg-primary text-primary-content">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold">${title}</h1>
+    </div>
 </header>
-<main>
-    ${content}
+
+<main class="container mx-auto p-6 flex-grow">
+    <div class="card shadow-lg bg-base-200">
+        <div class="card-body">
+            ${content}
+        </div>
+    </div>
 </main>
+
+<footer class="footer items-center p-4 bg-neutral text-neutral-content">
+    <div class="container mx-auto">
+        <p>© 2024 | Powered by DaisyUI & HTMX</p>
+    </div>
+</footer>
 </body>
 </html>
