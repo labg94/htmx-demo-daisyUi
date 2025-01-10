@@ -1,5 +1,6 @@
 @template.layout( title="Todo App", content = @`
 
+    <label for="search-todos"></label>
     <input type="text" id="search-todos" name="query" placeholder="Search todos..."
            hx-get="/todos"
            hx-trigger="keyup changed delay:100ms"
@@ -11,9 +12,8 @@
 
     </div>
 
-    <form hx-post="/todos" hx-target="#todo-list ul" hx-swap="beforeend">
-        <label>
-            <input type="text" name="title" placeholder="Add a new todo..." required>
-        </label>
+    <form hx-post="/todos" hx-target="#todo-list ul" hx-swap="beforeend" hx-trigger="submit keyup[key=='Enter']">
+        <label for="title"></label>
+        <input type="text" id="title" name="title" placeholder="Add a new todo..." required>
         <button type="submit">Add</button>
     </form>`)
