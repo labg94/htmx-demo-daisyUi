@@ -4,5 +4,6 @@ CREATE TABLE todo
     title      VARCHAR(255),
     completed  BOOLEAN                                 NOT NULL,
     created_at TIMESTAMP WITHOUT TIME ZONE,
+    update_at TIMESTAMP WITHOUT TIME ZONE,
     CONSTRAINT pk_todo PRIMARY KEY (id)
 );

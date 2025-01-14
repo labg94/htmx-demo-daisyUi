@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
@@ -22,10 +23,17 @@ public class Todo {
     private boolean completed = false;
 
     private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
 
     @PrePersist
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
+        this.updateAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updateAt = LocalDateTime.now();
     }
 
     public void toggle() {
