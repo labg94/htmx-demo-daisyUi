@@ -24,7 +24,7 @@
     </div>
 
     <!-- Add Todo Form -->
-    <form class="form-control" hx-post="/todos" hx-target="#todo-list ul" hx-swap="beforeend" hx-trigger="submit keyup[key=='Enter']">
+    <form class="form-control" hx-post="/todos" hx-target="#todo-list ul" hx-swap="beforeend" hx-trigger="submit keyup[key=='Enter']"  hx-on::after-request="if(event.detail.successful) this.reset()">
         <label for="title" class="label">
             <span class="label-text">Add a New Todo</span>
         </label>
