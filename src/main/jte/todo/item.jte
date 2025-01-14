@@ -8,7 +8,7 @@
                checked="${todo.isCompleted()}">
         <span class="text-sm ${todo.isCompleted() ? "line-through text-gray-500" : ""}">${todo.getTitle()}</span>
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 tooltip" data-tip="delete">
         <button class="btn btn-outline btn-xs btn-error" hx-delete="/todos/${todo.getId()}"
                 hx-target="closest li" hx-swap="outerHTML">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ">
