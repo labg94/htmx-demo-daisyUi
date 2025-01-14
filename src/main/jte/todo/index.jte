@@ -1,3 +1,8 @@
+@import me.lbenavides.htmxdemo.todo.entity.Todo
+@import java.util.List
+@param List<Todo> todos
+
+
 @template.layout( title="Todo App", content = @`
 
     <div class="form-control mb-4">
@@ -14,8 +19,8 @@
     </div>
 
     <!-- Todo List -->
-    <div id="todo-list" class="mb-6 card bg-base-200 shadow-lg p-4" hx-get="/todos" hx-trigger="load">
-        <!-- Todo items will load dynamically -->
+    <div id="todo-list" >
+        @template.todo.list(todos = todos)
     </div>
 
     <!-- Add Todo Form -->
