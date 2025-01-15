@@ -1,7 +1,5 @@
-package me.lbenavides.htmxdemo.todo.controller;
+package me.lbenavides.htmxdemo.todo;
 
-import me.lbenavides.htmxdemo.todo.entity.Todo;
-import me.lbenavides.htmxdemo.todo.service.TodoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +17,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("todos")
-public class TodoController {
+class TodoController {
 
     private final TodoService todoService;
 

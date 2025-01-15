@@ -1,7 +1,5 @@
-package me.lbenavides.htmxdemo.todo.service;
+package me.lbenavides.htmxdemo.todo;
 
-import me.lbenavides.htmxdemo.todo.entity.Todo;
-import me.lbenavides.htmxdemo.todo.repository.TodoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

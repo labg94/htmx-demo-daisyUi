@@ -1,4 +1,4 @@
-@import me.lbenavides.htmxdemo.todo.entity.Todo
+@import me.lbenavides.htmxdemo.todo.Todo
 @import java.util.List
 @param List<Todo> todos
 

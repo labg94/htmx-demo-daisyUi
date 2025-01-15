@@ -1,4 +1,4 @@
-@import me.lbenavides.htmxdemo.todo.entity.Todo
+@import me.lbenavides.htmxdemo.todo.Todo
 @param Todo todo
 
 <li id="todo-${todo.getId()}" class="flex items-center justify-between p-2 border-b border-gray-300 last:border-0">

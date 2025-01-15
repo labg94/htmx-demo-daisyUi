@@ -1,4 +1,4 @@
-package me.lbenavides.htmxdemo.todo.entity;
+package me.lbenavides.htmxdemo.todo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
